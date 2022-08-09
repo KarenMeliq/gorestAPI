@@ -8,8 +8,9 @@ class GetUser:
 
     def getUser(self):
         response = requests.get('https://gorest.co.in/public-api/users')
-        assert response.status_code == 200
         print(response.json())
+        return response
+
 
 
 user =  GetUser
