@@ -11,7 +11,7 @@ class DeleteUser:
         response = requests.delete("https://gorest.co.in/public-api/users/3076", headers=hed)
         response_body = response.json()
         print(response_body)
-        assert response_body["code"] == 204
+
 
 user = DeleteUser
 user.deletUser(self)

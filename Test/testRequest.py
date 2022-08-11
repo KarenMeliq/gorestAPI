@@ -2,6 +2,7 @@ import pytest
 from getUser import GetUser
 from createUser import CreateUser
 from putUser import PutUser
+from deleteUser import DeleteUser
 
 class testRequest:
 
@@ -16,3 +17,7 @@ class testRequest:
     def testPutUser(self):
         resp_body = PutUser.putUser()
         assert resp_body["code"] == 200
+
+    def testdeleteuser(self):
+        resp = DeleteUser.deletUser()
+        assert  resp["code"] == 200
